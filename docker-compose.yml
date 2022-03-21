@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+    banco:
+        container_name: banco
+        image: jehycf/banco:1
+        build: ./postgres
+        ports:
+            - "5432:5432"
+    
+    app:
+        container_name: projeto3
+        image: jheycf/app:1
+        build: .
+        ports:
+            - "8081:8080"
+        depends_on:
+            - "banco"
+        links:
+            - "banco:host-banco"
