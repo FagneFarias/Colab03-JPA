@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      template="../template.xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    
+        <ui:define name="container-template">
+            
+         <h1> Integrantes nascidos entre 01/01/2000 e 20/04/2016</h1>
+        
+        <h:form>
+            <h:dataTable value="#{integranteController.listNascimento()}" var="integrante">
+                
+                <h:column>
+                    <f:facet name="header" >Id</f:facet>
+                    #{integrante.id}
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header" >Nome</f:facet>
+                    #{integrante.nome}
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header" >Data de Nascimento</f:facet>
+                    #{integrante.dataDeNascimento}
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header" >CPF</f:facet>
+                    #{integrante.cpf}
+                </h:column>
+                
+                <h:column>
+                    <h:commandButton value="Editar" action="#{integranteController.update(integrante)}" />
+                </h:column>
+                
+                <h:column>
+                    <h:commandButton value="Remover" action="#{integranteController.delete(integrante)}" />
+                </h:column>
+                
+            </h:dataTable>
+            
+        </h:form>
+    </ui:define>
+</ui:composition>
+

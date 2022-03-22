@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="projeto3" />
+        <module name="Colab03-JPA" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="projeto3" options="-endorseddirs &quot;/home/camila/Área de Trabalho/Colab03-JPA/target/endorsed&quot;" />
+      <module name="Colab03-JPA" options="-endorseddirs $PROJECT_DIR$/target/endorsed" />
+      <module name="projeto3" options="-endorseddirs &quot;$PROJECT_DIR$/../../../camila/Área de Trabalho/Colab03-JPA/target/endorsed&quot;" />
     </option>
   </component>
 </project>
