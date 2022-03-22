@@ -41,7 +41,7 @@ public class IntegrantePersistencia {
         integrantes = entityManager
                 .createQuery("FROM Integrante i WHERE i.dataDeNascimento BETWEEN :dataInicial and :dataFinal", Integrante.class)
                 .setParameter("dataInicial", LocalDate.of(2000, 1, 1))
-                .setParameter("dataFinal", LocalDate.of(2016,4,20))
+                .setParameter("dataFinal", LocalDate.of(2022,1,20))
                 .getResultList();
         return integrantes;
     }
