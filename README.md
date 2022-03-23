@@ -9,7 +9,7 @@ Professor: Ricardo de Sousa Job
 
 # Atividade Colaborativa 03 – Java Persistence API
 
-## EQuipe:
+## Equipe:
 - <a href="https://github.com/camilacasimiro" alt="github">Camila Casimiro</a>
 - <a href="https://github.com/FagneFarias" alt="github">Fagne Farias</a>
 - <a href="https://github.com/JenniferSilva46" alt="github">Jennifer Silva</a>
